@@ -3,10 +3,11 @@ Type: Package
 Title: Fonction sur les matrices idempotentes en R
 Version: 1.0.0
 Author: Hurchil
-Maintainer: tchindadjate@gmail.com
+Maintainer: <tchindadjate@gmail.com>
 Description: Juste un test.
 License: MIT
 Depends: 
     R (>= 3.6)
 Encoding: UTF-8
 Language: fr-FR
+RoxygenNote: 7.3.2
