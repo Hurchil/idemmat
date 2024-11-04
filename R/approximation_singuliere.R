@@ -1,15 +1,15 @@
-#' Cette fonction approxime une matrice "mat" par une matrice idempotente "result"
-#' en utilisant la décomposition en valeurs singulières (SVD)
-#' @param mat la matrice
-#' @return la matrice idempotente approcher à mat
+#' This function approximates a matrix "mat" by an idempotent matrix "result"
+#' using singular value decomposition (SVD)
+#' @param mat the matrix
+#' @return the idempotent matrix approximating mat
 #' @examples
 #' as_approximate_svd(matrix(c(1, 2, 2, 4), nrow = 2))
 #' @export
 
 as_approximate_svd <- function(mat){
-    if(!is.matrix(mat)) stop(cout_error("Veuillez fournir une matrice"))
+    if(!is.matrix(mat)) stop(cout_error("Please provide a matrix"))
 
-    # Décomposition en valeurs singulière
+    # Singular value decomposition
     svd_decomp <- svd(mat)
     U <- svd_decomp$u
 

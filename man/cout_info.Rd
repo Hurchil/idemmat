@@ -2,19 +2,16 @@
 % Please edit documentation in R/show.R
 \name{cout_info}
 \alias{cout_info}
-\title{Affiche un message sous forme d'info, en coloriant en rouge encadré par cet émojis ℹ️}
+\title{Displays a message as information, coloring it in yellow framed by this emoji ℹ️}
 \usage{
 cout_info(message)
 }
 \arguments{
-\item{message}{le message à afficher}
+\item{message}{the message to display}
 }
 \value{
-le message formater
+the formatted message
 }
 \description{
-Affiche un message sous forme d'info, en coloriant en rouge encadré par cet émojis ℹ️
-}
-\examples{
-cout_info("Une information importante")
+Displays a message as information, coloring it in yellow framed by this emoji ℹ️
 }

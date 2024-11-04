@@ -2,18 +2,22 @@
 % Please edit documentation in R/is_idempotent.R
 \name{is_idempotent}
 \alias{is_idempotent}
-\title{Vérifie si une matrice est idempotente}
+\title{Checks if a matrix is idempotent.
+A matrix A is said to be idempotent if (A^2 = A)}
 \usage{
-is_idempotent(mat)
+is_idempotent(mat, tol = 1e-10)
 }
 \arguments{
-\item{mat}{Une matrice carrée.}
+\item{mat}{A square matrix.}
+
+\item{tol}{The tolerance for numerical approximation}
 }
 \value{
-TRUE si mat est idempotente (A^2 = A), FALSE sinon.
+TRUE if mat is idempotent, FALSE otherwise.
 }
 \description{
-Vérifie si une matrice est idempotente
+Checks if a matrix is idempotent.
+A matrix A is said to be idempotent if (A^2 = A)
 }
 \examples{
 is_idempotent(matrix(c(1, 0, 0, 0), 2, 2))

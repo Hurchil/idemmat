@@ -5,7 +5,7 @@ Version: 1.0.0
 Author: Hurchil
 Maintainer: <tchindadjate@gmail.com>
 Description: Juste un test.
-License: MIT
+License: MIT + file LICENSE
 Depends: 
     R (>= 3.6)
 Encoding: UTF-8

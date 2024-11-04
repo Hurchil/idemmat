@@ -2,19 +2,16 @@
 % Please edit documentation in R/show.R
 \name{cout_error}
 \alias{cout_error}
-\title{Affiche un message sous forme d'erreur, en coloriant en rouge encadré par cet émojis ❌}
+\title{Displays a message as an error, coloring it in red framed by this emoji ❌}
 \usage{
 cout_error(message)
 }
 \arguments{
-\item{message}{le message à afficher}
+\item{message}{the message to display}
 }
 \value{
-le message formater
+the formatted message
 }
 \description{
-Affiche un message sous forme d'erreur, en coloriant en rouge encadré par cet émojis ❌
-}
-\examples{
-cout_error("Une erreur s'est produite")
+Displays a message as an error, coloring it in red framed by this emoji ❌
 }

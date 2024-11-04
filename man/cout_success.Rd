@@ -2,19 +2,16 @@
 % Please edit documentation in R/show.R
 \name{cout_success}
 \alias{cout_success}
-\title{Affiche un message sous forme de succès, en coloriant en rouge encadré par cet émojis ✅}
+\title{Displays a message as a success, coloring it in green framed by this emoji ✅}
 \usage{
 cout_success(message)
 }
 \arguments{
-\item{message}{le message à afficher}
+\item{message}{the message to display}
 }
 \value{
-le message formater
+the formatted message
 }
 \description{
-Affiche un message sous forme de succès, en coloriant en rouge encadré par cet émojis ✅
-}
-\examples{
-cout_success("Opération réussie")
+Displays a message as a success, coloring it in green framed by this emoji ✅
 }

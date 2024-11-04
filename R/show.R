@@ -1,28 +1,26 @@
-#' Affiche un message sous forme d'erreur, en coloriant en rouge encadré par cet émojis ❌
-#' 
-#' @param message le message à afficher
-#' @return le message formater
-#' @examples
-#' cout_error("Une erreur s'est produite")
-cout_error <- function(message){
-    paste("\n❌\033[31m ", " \033[0m❌", sep = message)
-}
-
-#' Affiche un message sous forme de succès, en coloriant en rouge encadré par cet émojis ✅
+#' Displays a message as an error, coloring it in red framed by this emoji ❌
 #'
-#' @param message le message à afficher
-#' @return le message formater
-#' @examples
-#' cout_success("Opération réussie")
-cout_success <- function(message){
-    paste("\n✅\033[32m ", " \033[0m✅", sep = message)
+#' @param message the message to display
+#' @return the formatted message
+
+cout_error <- function(message) {
+    return(paste("\n❌\033[31m", message, "\033[0m❌"))
 }
 
-#' Affiche un message sous forme d'info, en coloriant en rouge encadré par cet émojis ℹ️
-#' @param message le message à afficher
-#' @return le message formater
-#' @examples
-#' cout_info("Une information importante")
-cout_info <- function(message){
-    paste("\nℹ️\033[33m  ", " \033[0m", sep = message)
+#' Displays a message as a success, coloring it in green framed by this emoji ✅
+#'
+#' @param message the message to display
+#' @return the formatted message
+
+cout_success <- function(message) {
+    return(paste("\n✅\033[32m", message, "\033[0m✅"))
+}
+
+#' Displays a message as information, coloring it in yellow framed by this emoji ℹ️
+#'
+#' @param message the message to display
+#' @return the formatted message
+
+cout_info <- function(message) {
+    return(paste("\nℹ️\033[33m", message, "\033[0m"))
 }

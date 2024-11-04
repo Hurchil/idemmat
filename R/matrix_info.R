@@ -1,35 +1,38 @@
-#' Cette fonction retourne une liste qui contient plusieurs information à partir d'une matrice
-#' Notamment: son rang, ses valeurs propres, sa trace, si c'est idempotent ou pas
-#' @param mat la matrice d'entrée
-#' @return une liste contenant les informations de la matrices
+#' This function returns a list containing several pieces of information from a matrix
+#' Notably: its rank, its eigenvalues, its trace, and whether it is idempotent or not
+#' @param mat the input matrix
+#' @return a list containing the information of the matrix
 #' @examples
-#' idem(matrix(c(1, 2, 2, 4), nrow = 2))
 #' matrix_info(matrix(c(1, 2, 2, 4), nrow = 2))
-#' matrix_info(matrix(1:6, nrow = 2)) # Matrice non carrée
-#' matrix_info(diag(1, 3)) # Matrice idempotente
+#' matrix_info(matrix(1:6, nrow = 2)) # Non-square matrix
+#' matrix_info(diag(1, 3)) # Idempotent matrix
 #' @export
 
 matrix_info <- function(mat){
-    # Déterminer le rang
+    # Determine the rank
     rang <- qr(mat)$rank
 
-    # Determiner la décomposition spectrale (vecteurs et valeurs propres)
-    decomposition_spectral <- eigen(mat)
-    valeur_propres <- decomposition_spectral$values
-    vecteur_propres <- decomposition_spectral$vectors
-    
-    # Déterminer si la matrice est idempotente
-    idem <- is_idempotent(mat)
+    # Determine if the matrix is idempotent
 
-    # Initialiser les variables trace et symetrique pour les determiner si la matrice est carré
+    # Initialize trace and symmetric variables to determine if the matrix is square
     trace <- NULL
     symetrique <- FALSE
     if(nrow(mat) == ncol(mat)){
         trace <- sum(diag(mat))
         symetrique <- all(mat == t(mat))
-    }
 
-    # Retourne toutes les informations de la matrice
+        decomposition_spectral <- eigen(mat)
+        valeur_propres <- decomposition_spectral$values
+        vecteur_propres <- decomposition_spectral$vectors
+        idem <- is_idempotent(mat)
+    } else {
+        valeur_propres <- NULL
+        vecteur_propres <- NULL
+
+        idem <- FALSE
+    }
+    
+    # Return all the information of the matrix
     return(list(rang = rang,
                 idem = idem,
                 trace = trace,
